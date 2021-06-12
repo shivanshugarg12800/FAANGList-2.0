@@ -1,8 +1,12 @@
 # FAANG List 2.0
 
-![faang logo](/images/faang.png)
-
+<p align="center">
+<img src="./images/faang.png" width ="300">
+</p>
 This repository contains solutions to all the problems listed in the FAANGList - 2.0 curated by PepCoding Ltd.
+<br>
+<br>
+<br>
 
 ## Contents
 
