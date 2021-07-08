@@ -1,6 +1,6 @@
+@SuppressWarnings("unchecked")
 static int[] topoSort(int N, ArrayList<ArrayList<Integer>> edges) 
     {
-        @SuppressWarnings("unchecked")
         ArrayList<Integer>[] graph = new ArrayList[N];
         for(int i=0;i<N;i++) graph[i] = new ArrayList<>();
         
