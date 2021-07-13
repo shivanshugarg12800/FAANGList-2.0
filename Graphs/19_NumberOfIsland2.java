@@ -36,7 +36,7 @@ public class Solution {
         for(Point p: operators){
             int i = p.x;
             int j = p.y;
-            if(grid[i][j] == 1){
+            if(grid[i][j] == 1){  
                 ans.add(count);
                 continue;
             }
