@@ -45,6 +45,6 @@ vector<int> findRedundantConnection(vector<vector<int>> &edges)
             ans.push_back(edge[1]);
         }
     }
-    int m = ans.size();
-    return {ans[m - 2], ans[m - 1]};
+    int c = ans.size();
+    return {ans[c - 2], ans[c - 1]};
 }
