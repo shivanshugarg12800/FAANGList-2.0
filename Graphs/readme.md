@@ -27,3 +27,4 @@
 23. [Kruskal's Algo](https://www.geeksforgeeks.org/kruskals-minimum-spanning-tree-algorithm-greedy-algo-2/)
 24. [Job Sequencing](https://www.geeksforgeeks.org/job-sequencing-problem/)
 25. [Eulerian Path in Undirected Graph](https://practice.geeksforgeeks.org/problems/eulerian-path-in-an-undirected-graph/0)
+26. [Redundant Connection](https://leetcode.com/problems/redundant-connection/)
