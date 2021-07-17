@@ -1,25 +1,26 @@
 public class Solution {
-    /*
-     * @param words1: a list of string
-     * @param words2: a list of string
-     * @param pairs: a list of string pairs
-     * @return: return a boolean, denote whether two sentences are similar or not
+    /**
+     * @param words1: 
+     * @param words2: 
+     * @param pairs: 
+     * @return: Whether sentences are similary or not?
      */
-
     public boolean isSimilarDFS(HashMap<String,ArrayList<String>> graph,String src,String dest, HashSet<String> vis){
         if(src.equals(dest)) return true;
         vis.add(src);
+        if(graph.get(src) == null) return false;
         ArrayList<String> al = graph.get(src);
-        for(String s: al){
+        for(int i=0;i<al.size();i++){
+            String s = al.get(i);
             if(!vis.contains(s)){
                 if(isSimilarDFS(graph,s,dest,vis))  return true;
             }
         }
         return false;
     }
-    public boolean isSentenceSimilarity(String[] words1, String[] words2, List<List<String>> pairs) {
-        int n = words1.length;
-        int m = words2.length;
+    public boolean areSentencesSimilarTwo(List<String> words1, List<String> words2, List<List<String>> pairs) {
+        int n = words1.size();
+        int m = words2.size();
         if(n != m) return false;
         HashMap<String,ArrayList<String>> graph = new HashMap<>();
         for(List<String> p: pairs){
@@ -33,22 +34,9 @@ public class Solution {
         
         for(int i=0;i<n;i++){
             HashSet<String> vis = new HashSet<>();
-            String src = words1[i];
-            String dest = words2[i];
+            String src = words1.get(i);
+            String dest = words2.get(i);
             if(!isSimilarDFS(graph,src,dest,vis)) return false;
-            
-            // For sentence Similarity I
-            // if(src.equals(dest)) continue;
-            // ArrayList<String> al = graph.get(src);
-            // boolean isPath = false;
-            // for(String s: al){
-            //     if(s.equals(dest)){
-            //         isPath = true;
-            //         break;
-            //     } 
-            // }
-            // if(!isPath) return false;
-        
         }
         return true;
     }
